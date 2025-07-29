@@ -3,7 +3,6 @@ CP1404/CP5632 Practical
 File and class example - opens/reads a file, stores in objects of custom class
 """
 
-import csv
 from programming_language import ProgrammingLanguage
 
 

@@ -1,0 +1,39 @@
+BoxLayout:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    BoxLayout:
+        orientation: 'horizontal'
+        spacing: 10
+
+        TextInput:
+            id: input_miles
+            text: "0"
+            multiline: False
+            input_filter: 'int'
+            font_size: 32
+            on_text: app.handle_conversion(self.text)  # Automatically convert
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.3
+            spacing: 5
+
+            Button:
+                text: "Up"
+                on_press: app.handle_increment(input_miles.text, 1)
+
+            Button:
+                text: "Down"
+                on_press: app.handle_increment(input_miles.text, -1)
+
+    Label:
+        text: app.output_text
+        color: (1, 1, 0, 1)
+        font_size: 32
+        bold: True
+
+    # Button:
+    #     text: "Convert"
+    #     on_press: app.handle_conversion(input_miles.text)

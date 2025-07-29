@@ -1,8 +1,8 @@
 """Estimate: 2.5 hours"""
 
-from project import Project
 from datetime import datetime
 
+from project import Project
 
 FILENAME = "projects.txt"
 
